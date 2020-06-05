@@ -19,9 +19,11 @@ class Triangle
   end
 
   def valid?
-    if @a <= 0 || @b <= 0 || @c <= 0
+    if a <= 0 || b <= 0 || c <= 0
+      begin
       raise TriangleError
-    elsif (@a + @b) <= @c || (@a + @c) <= @b || (@b + @c) <= @a
+    elsif (a + b) <= c || (a + c) <= b || (b + c) <= a
+      begin
       raise TriangleError
     else
     end
