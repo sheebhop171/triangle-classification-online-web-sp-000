@@ -23,10 +23,9 @@ class Triangle
       begin
       raise TriangleError
       end
-    elsif (a + b) <= c || (a + c) <= b || (b + c) <= a
+    else (a + b) <= c || (a + c) <= b || (b + c) <= a
       begin
       raise TriangleError
-    else
     end
     end
   end
