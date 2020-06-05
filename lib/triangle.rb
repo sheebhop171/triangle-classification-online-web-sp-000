@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor :a, :b, :c
+  attr_accessor :a, :b, :c, :kind
 
   def initialize(a, b, c)
     @a = a
@@ -11,10 +11,12 @@ class Triangle
   def kind
 
     if a <= 0 || b <= 0 || c <= 0 || (a + b) <= c || (a + c) <= b || (b + c) <= a
+
       begin
       raise TriangleError
       end
-    elsif a == b && b == c
+
+      elsif a == b && b == c
        self.kind = :equilateral
      elsif a == b || b == c|| c == a
        self.kind = :isosceles
