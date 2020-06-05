@@ -18,7 +18,7 @@ class Triangle
      end
   end
 
-  def kind
+  def valid
     if a <= 0 || b <= 0 || c <= 0
       begin
       raise TriangleError
